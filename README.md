@@ -1,4 +1,4 @@
-# pkg-zmq
+# pkg-prime_server
 RPM packaging of prime_server for Sailfish 
 
 To get the sources, run `download.sh`
