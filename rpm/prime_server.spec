@@ -6,7 +6,8 @@ License: 'ambiguous' MIT
 Group: Libraries/Network
 URL: https://github.com/kevinkreiser/prime_server
 
-Source: https://github.com/kevinkreiser/prime_server/archive/0.6.3.tar.gz
+#Source: https://github.com/kevinkreiser/prime_server/archive/0.6.3.tar.gz
+Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildRequires: gcc-c++ libtool
@@ -34,7 +35,7 @@ Requires: %{name} = %{version}
 Tools for prime_server
 
 %prep
-%setup
+%setup -q -n %{name}-%{version}/prime_server
 
 %build
 %{__make} clean || true
@@ -55,7 +56,9 @@ CXXFLAGS="$CXXFLAGS -fPIC"
 
 %pre
 
-%post
+%post -n prime_server -p /sbin/ldconfig
+
+%postun -n prime_server -p /sbin/ldconfig
 
 %files
 %files

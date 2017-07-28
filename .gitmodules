@@ -1,0 +1,3 @@
+[submodule "prime_server"]
+	path = prime_server
+	url = https://github.com/kevinkreiser/prime_server.git
