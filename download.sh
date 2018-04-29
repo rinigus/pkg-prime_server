@@ -12,3 +12,6 @@ cd prime_server
 git submodule update --init --recursive
 
 git checkout $VERSION
+
+# also create a tarball when we are at it
+tar -cvzf ../prime_server-${VERSION}.tar.gz ../prime_server
