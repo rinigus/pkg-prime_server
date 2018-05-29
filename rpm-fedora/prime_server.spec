@@ -4,7 +4,7 @@ Summary: non-blocking (web)server API for distributed computing and SOA based on
 Name: prime_server
 Version: 0.6.3
 Release: 1%{?dist}
-License: 'ambiguous' MIT
+License: BSD
 Group: Libraries/Network
 URL: https://github.com/kevinkreiser/prime_server
 
